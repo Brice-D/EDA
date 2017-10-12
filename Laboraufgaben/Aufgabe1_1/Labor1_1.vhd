@@ -8,5 +8,5 @@ END Labor1_1;
 
 ARCHITECTURE behav OF Labor1_1 IS
 	begin
-		f <= (not v or z or not x) and (z or y) and (not z or not y or v);
+		f <= (not v or z or not x) and (z or y) and (not z or not y or v); -- new
 END behav;
