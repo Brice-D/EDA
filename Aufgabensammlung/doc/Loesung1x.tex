@@ -1,0 +1,59 @@
+\documentclass[11pt]{scrartcl}
+
+    \usepackage[ngerman]{babel}
+    \usepackage{ucs}
+    \usepackage[utf8x]{inputenc}
+    \usepackage[T1]{fontenc}
+
+    \input kvmacros
+
+\begin{document}
+\title{Lösungen Aufgabensammlung 1.x}
+\author{Brice Dorsey Long Dje, Felix Jägers}
+\maketitle
+
+\section{Aufgabe 1.1}
+
+Aufgabe 1.1 Funktionstabelle f:
+
+\begin{center}
+\begin{tabular}{lr}
+    \begin{tabular}[t]{r|cccc|c}
+  ($i$)\textsubscript{10}&$x$&$y$&$z$&$v$&$f$\\
+  \hline
+  0&0&0&0&0&0\\
+  1&0&0&0&1&0\\
+  2&0&0&1&0&1\\
+  3&0&0&1&1&1\\
+  4&0&1&0&0&1\\
+  5&0&1&0&1&1\\
+  6&0&1&1&0&0\\
+  7&0&1&1&1&1\\
+    \end{tabular}
+  &
+    \begin{tabular}[t]{r|cccc|c}
+      ($i$)\textsubscript{10}&$x$&$y$&$z$&$v$&$f$\\
+  \hline
+  8&1&0&0&0&0\\
+  9&1&0&0&1&0\\
+  10&1&0&1&0&1\\
+  11&1&0&1&1&1\\
+  12&1&1&0&0&1\\
+  13&1&1&0&1&0\\
+  14&1&1&1&0&0\\
+  15&1&1&1&1&1\\
+    \end{tabular}    
+\end{tabular}
+\end{center}
+
+Karnaugh-Diagramme jeweils für DMF und KMF:
+\begin{center}
+\karnaughmap{4}{$f\textsubscript{DMF}$:}{{$x$}{$y$}{$z$}{$v$}}
+{0011110100111001}
+{
+    \put(0,2){\oval(1.9,1.9)[r]}
+}
+\karnaughmap{4}{$f\textsubscript{KMF}$:}{{$x$}{$y$}{$z$}{$v$}}{0011110100111001}{}
+\end{center}
+
+\end{document}
