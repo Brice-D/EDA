@@ -7,6 +7,8 @@
     \usepackage{listings}
     \usepackage[usenames,dvipsnames]{xcolor}
     \usepackage{pict2e}
+    \usepackage{graphicx}
+    \usepackage[left=2.5cm,right=2.5cm,top=1.5cm,bottom=1cm,includeheadfoot]{geometry}
     
     \input kvmacros
 
@@ -44,11 +46,11 @@
         \rlap{\usebox\MBox}\color{#1}\rule[-1.2\dp\MBox]{\wd\MBox}{0.5pt}}}
 
 \begin{document}
-\title{Lösungen Aufgabensammlung 3.1.x}
+\title{Lösungen Aufgabensammlung K-1 bis K-10}
 \author{Brice Dorsey Long Dje, Felix Jägers}
 \maketitle
 
-\section{Aufgabe 3.1.1}
+\section{Aufgabe K-1}
 
 Gegebene Funktionstabelle f:
 
@@ -111,7 +113,7 @@ $f\textsubscript{KMF} = (\overline{v} \lor z \lor \overline{x}) \land
  (z \lor y) \land (\overline{z} \lor \overline{y} \lor v) $
 
 \newpage
-\section{Aufgabe 3.1.2}
+\section{Aufgabe K-2}
 \subsection{a) DNF bestimmen}
 
 Gegebene Funktionstabelle f aus dem Karnaugh-Diagramme abgelesen:
@@ -161,7 +163,7 @@ Aus der Funktionstabelle die DNF erstellt und direkt die :\\
     \Cline[orange]{(x \land \overline{y} \land \overline{z} \land \overline{v})}$\\
 \end{tabular}
 \subsection{b) Beweis}
-Ausklammern der gleichen Variablen innerhabl der jeweils gleich unterstrichenen Terme:\\
+Ausklammern der gleichen Variablen innerhalb der jeweils gleich unterstrichenen Terme:\\
 \ \\
 \begin{tabular}{lll}
     $f\textsubscript{DNF} $&$=$&
@@ -176,7 +178,7 @@ Ausklammern der gleichen Variablen innerhabl der jeweils gleich unterstrichenen 
     \Cline[orange]{((x \land \overline{y}) \lor (\overline{x} \land y))}$
 \end{tabular}
 \\[1em]
-Jeweils der unterstrichene Term ist ein XNOR. Rot und Grün sind gleich und Blau und Orange.
+Jeweils der unterstrichene Term ist ein XOR. Rot und Grün sind gleich und Blau und Orange.
 Damit wird das auch direkt zusammen gefasst:\\
 \ \\
 \begin{tabular}{lll}
@@ -195,6 +197,15 @@ Damit wird das auch direkt zusammen gefasst:\\
     $x \oplus y \oplus z \oplus v$
 \end{tabular}
 \\[1em]
+
+\subsection{c) Schaltung Minimalform}
+
+Die Minimalform von einem XOR mit den zulässigen Gattern besteht aus einem NAND-, OR- und AND-Gatter.
+Damit ist die Minimalform der gesamten Funktion drei von dieser XOR Realisierung verschaltet. Das sieht
+dann folgendermaßen aus:
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{../Aufgabe_K-2/Schaltung/Aufgabe_K-2.jpg}
+\end{center}
 
 % VHDL Test code snippet
 \begin{lstlisting}[style=vhdl]
