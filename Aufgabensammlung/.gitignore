@@ -13,3 +13,4 @@ simulation/
 *.log
 *.pdf
 *.synctex.gz
+*.dvi

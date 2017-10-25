@@ -1,12 +1,12 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.all;
+library ieee;
+use ieee.std_logic_1164.all;
 
-ENTITY Labor1_1 IS
-	PORT (v, x, y, z: IN std_logic; 
-	      f: OUT std_logic);
-END Labor1_1;
+entity Labor1_1 is
+	port (v, x, y, z: in std_logic; 
+	      f: out std_logic);
+end Labor1_1;
 
-ARCHITECTURE behav OF Labor1_1 IS
-	begin
-		f <= (not v or z or not x) and (z or y) and (not z or not y or v); -- new
-END behav;
+architecture behav of Labor1_1 is
+begin
+		f <= (not v or z or not x) and (z or y) and (not z or not y or v);
+end behav;
