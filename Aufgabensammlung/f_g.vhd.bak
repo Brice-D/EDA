@@ -1,0 +1,13 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY COMB_logic_3 IS
+	PORT( x , y , z : IN std_logic ;
+					f , g : OUT std_logic ) ;
+END COMB_logic_3 ;
+
+ARCHITECTURE behave OF COMB_logic_3 IS
+	BEGIN
+	g <= (not x) and z;
+	f <= (x and z) or (y);
+END behave ;
