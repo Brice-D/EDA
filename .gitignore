@@ -1,3 +1,7 @@
 Labor
 ZedBoard
 Labor_PL_Gregorius.pdf
+
+
+# Mac specific files
+.DS_Store
