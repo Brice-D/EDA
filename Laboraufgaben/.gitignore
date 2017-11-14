@@ -1,9 +1,14 @@
+# Quartus generated files
 db/
 incremental_db/
 output_files/
 simulation/
 
+# Quartus useless files?!
 *.bak
+*.rpt
+*.map.summary
+*.done
 
 
 # Compiled TeX docs
@@ -13,3 +18,4 @@ simulation/
 *.log
 *.pdf
 *.synctex.gz
+*.dvi
